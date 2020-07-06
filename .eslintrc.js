@@ -30,6 +30,7 @@ module.exports = {
             },
         ],
         'react/prop-types': 0,
+        'react/no-danger': 0,
     },
     parser: 'babel-eslint',
 };
