@@ -29,5 +29,7 @@ module.exports = {
                 html: true,
             },
         ],
+        'react/prop-types': 0,
     },
+    parser: 'babel-eslint',
 };
