@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: 'personal page',
+        title: 'maxdev',
         description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-        author: '@gatsbyjs',
+        author: 'maxdev',
     },
     plugins: [
         'gatsby-plugin-react-helmet',
@@ -39,6 +39,12 @@ module.exports = {
                     failOnError: false,
                     failOnWarning: false,
                 },
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-typography',
+            options: {
+                pathToConfigModule: 'src/utils/typography',
             },
         },
     ],
