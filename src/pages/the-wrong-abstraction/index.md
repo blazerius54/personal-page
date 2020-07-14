@@ -1,6 +1,8 @@
 ---
 title: Неправильная абстракция
 date: '2016-01-20'
+author: Sandi Metz
+origin: https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction
 ---
 
 Я думала о последствиях "плохой асбтракции". Моё выступление

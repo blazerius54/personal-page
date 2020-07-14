@@ -5,6 +5,8 @@ import Layout from '../components/layout';
 const BlogPost = ({ data }) => (
     <Layout>
         <h3>{data.markdownRemark.frontmatter.title}</h3>
+        <h4>{data.markdownRemark.frontmatter.author}</h4>
+        <h5><a href={data.markdownRemark.frontmatter.origin} target="_blank">Оригинал статьи</a></h5>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Layout>
 
@@ -16,6 +18,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        author
+        origin
       }
     }
   }

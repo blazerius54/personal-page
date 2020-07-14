@@ -1,6 +1,8 @@
 ---
 title: Программирование по принципу AHA
 date: '2020-06-22'
+author: Kent Dodds
+origin: https://kentcdodds.com/blog/aha-programming
 ---
 
 Опасности DRY, паутина WET, крутость AHA.

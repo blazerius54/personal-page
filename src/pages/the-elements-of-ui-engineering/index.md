@@ -1,7 +1,8 @@
 ---
 title: 'Элементы UI разработки'
 date: '2018-12-30'
-spoiler: Что делает проектирование UI сложным?
+author: Dan Abramov
+origin: https://overreacted.io/the-elements-of-ui-engineering/
 ---
 
 В моём [предыдущем посте](/things-i-dont-know-as-of-2018/) я говорил о том, что нужно допускать, что в наших знаниях
