@@ -38,16 +38,6 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json}": [
-      "eslint --fix src/"
-    ]
-  },
   "keywords": [
     "gatsby"
   ],
