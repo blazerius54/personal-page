@@ -9,7 +9,6 @@ const BlogPost = ({ data }) => (
         <h5><a href={data.markdownRemark.frontmatter.origin} target="_blank">Оригинал статьи</a></h5>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Layout>
-
 );
 
 export const query = graphql`
