@@ -32,6 +32,7 @@ module.exports = {
         'react/prop-types': 0,
         'react/no-danger': 0,
         'react/jsx-no-target-blank': 0,
+        'import/prefer-default-export': 'off',
     },
     parser: 'babel-eslint',
 };

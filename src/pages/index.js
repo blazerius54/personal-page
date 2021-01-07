@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { PostTitle } from '../components/PostTitle';
 
 const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
     <Layout>
@@ -13,9 +14,10 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
                     key={node.id}
                     to={node.fields.slug}
                 >
-                    <h2>
-                        {node.frontmatter.title}
-                    </h2>
+                    <PostTitle
+                        title={node.frontmatter.title}
+                        date={node.frontmatter.date}
+                    />
                 </Link>
             ))
         )}
