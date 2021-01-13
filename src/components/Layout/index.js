@@ -19,9 +19,9 @@ const Layout = ({ children }) => {
     return (
         <div className="layoutWrapper">
             <Index siteTitle={data.site.siteMetadata.title} />
-            <div>
-                <main>{children}</main>
-            </div>
+            <main>
+                {children}
+            </main>
         </div>
     );
 };

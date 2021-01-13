@@ -33,12 +33,13 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
             path: node.fields.slug,
             component: path.resolve('./src/templates/blog-post.js'),
             context: {
-                // Data passed to context is available
-                // in page queries as GraphQL variables.
                 slug: node.fields.slug,
             },
         });
     });
 
-    console.log(JSON.stringify(result, null, 4));
+    createPage({
+        path: '/',
+        component: path.resolve('./src/components/RootPage/index.js'),
+    });
 };
