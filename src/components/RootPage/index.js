@@ -21,6 +21,9 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
                             title={node.frontmatter.title}
                             date={node.frontmatter.date}
                         />
+                        <p>
+                            {node.excerpt}
+                        </p>
                     </Link>
                 </div>
             ))
@@ -37,6 +40,7 @@ export const query = graphql`
       edges {
         node {
           id
+          excerpt
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY", locale: "ru")

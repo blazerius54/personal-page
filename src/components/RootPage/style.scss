@@ -1,4 +1,13 @@
 .postsList {
   display: grid;
   row-gap: 40px;
+
+  a {
+    color: #272727;
+
+    &:hover {
+      color: #59C9DB;
+      text-decoration: none;
+    }
+  }
 }
