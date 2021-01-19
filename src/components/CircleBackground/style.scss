@@ -1,0 +1,21 @@
+.circleBackground {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: flex-end;
+
+  .bigCircle {
+    height: 100%;
+    width: 800px;
+    background: radial-gradient(
+                    circle,
+                    #EDF8F0 30%,
+                    #EDFAFA 30%,
+                    #EDFAFA 48%,
+                    #F6FCFD 48%,
+                    #F6FCFD 69%,
+                    rgba(0,0,0,0) 69%,
+                    rgba(0,0,0,0) 100%
+    );
+  }
+}
