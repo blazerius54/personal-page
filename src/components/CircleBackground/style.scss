@@ -1,11 +1,15 @@
 .circleBackground {
-  width: 100%;
+  width: 160%;
   height: 500px;
   display: flex;
   justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
 
   .bigCircle {
-    height: 100%;
+    position: absolute;
+    left: 530px;
+    height: inherit;
     width: 800px;
     background: radial-gradient(
                     circle,

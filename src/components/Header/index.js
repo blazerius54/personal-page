@@ -1,23 +1,27 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import './style.scss';
 
-const Index = ({ siteTitle }) => (
-    <header>
-        <h3>
-            <Link to="/">
-                {siteTitle}
-            </Link>
-        </h3>
-    </header>
-);
+const Header = () => {
+    const data = useStaticQuery(graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
+          }
+        }
+    `);
 
-Index.propTypes = {
-    siteTitle: PropTypes.string,
+    return (
+        <header>
+            <h3>
+                <Link to="/">
+                    {data.site.siteMetadata.title}
+                </Link>
+            </h3>
+        </header>
+    );
 };
 
-Index.defaultProps = {
-    siteTitle: '',
-};
-
-export default Index;
+export default Header;

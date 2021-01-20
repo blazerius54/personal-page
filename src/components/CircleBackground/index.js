@@ -3,9 +3,9 @@ import './style.scss';
 
 const CircleBackground = () => (
     <div className="circleBackground">
-        <div>
-            <div className="bigCircle" />
-        </div>
+        {/* <div> */}
+        <div className="bigCircle" />
+        {/* </div> */}
     </div>
 );
 

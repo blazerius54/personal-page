@@ -2,5 +2,10 @@
   margin: 0 auto;
   max-width: 740px;
   padding: 0 1rem 1.45rem;
-  display: grid;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
