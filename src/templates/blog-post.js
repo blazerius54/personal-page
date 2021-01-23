@@ -5,20 +5,20 @@ import '../styles/global.scss';
 
 const BlogPost = ({ data }) => (
     <Layout>
-        <h2 className="postTitle">
-            {data.markdownRemark.frontmatter.title}
-        </h2>
-        <h4 className="author">
-            Автор:
-            {' '}
-            {data.markdownRemark.frontmatter.author}
-        </h4>
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        <h5>
-            <a href={data.markdownRemark.frontmatter.origin} target="_blank">
-                Оригинал статьи
-            </a>
-        </h5>
+        <div className="postWrapper">
+            <h2 className="postTitle">
+                {data.markdownRemark.frontmatter.title}
+            </h2>
+            <h4 className="author">
+                Автор: {data.markdownRemark.frontmatter.author}
+            </h4>
+            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+            <h5>
+                <a href={data.markdownRemark.frontmatter.origin} target="_blank">
+                    Оригинал статьи
+                </a>
+            </h5>
+        </div>
     </Layout>
 );
 

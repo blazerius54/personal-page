@@ -5,11 +5,9 @@ import Layout from '../Layout';
 import SEO from '../seo';
 import { PostTitle } from '../PostTitle';
 import CircleBackground from '../CircleBackground';
-import Header from '../Header';
 
 const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
     <>
-        <Header />
         <Layout>
             <CircleBackground />
             <SEO title="Home" />
