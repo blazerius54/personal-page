@@ -5,7 +5,7 @@ import '../styles/global.scss';
 
 const BlogPost = ({ data }) => (
     <Layout>
-        <div className="postWrapper">
+        <div className="postsWrapper">
             <h2 className="postTitle">
                 {data.markdownRemark.frontmatter.title}
             </h2>
@@ -21,7 +21,12 @@ const BlogPost = ({ data }) => (
         </div>
     </Layout>
 );
+function foo() {
+    const x = 2;
+    console.log(x);
+}
 
+foo();
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
