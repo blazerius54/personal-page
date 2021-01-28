@@ -37,8 +37,6 @@ origin: https://overreacted.io/on-let-vs-const/
 
 * **Переприсваивание могут не вызывать баги**: Есть три общих случая когда переприсваивание может вызвать баги: когда скоуп очень большой (например, скоуп модуля или большой функции), когда значение - параметр (неожиданно, если значение будет равно чему-либо, кроме того что было передано) и когда переменная используется во вложенной функции. Тем не менее, во многих случаях большинство переменных не подходят под эти требования и параметры вовсе не могут быть помечены как константы.
 
-* **Reassignments May Not Cause Bugs**: There are three common cases when reassignments cause bugs: when the scope is very large (such as module scope or huge functions), when the value is a parameter (so it's unexpected that it would be equal to something other than what was passed), and when a variable is used in a nested function. However, in many codebases most variables won't satisfy either of those cases, and parameters can't be marked as constant at all.
-
 * **Нет прироста производительности**: Я думаю, что движки уже знают, о переменных, которым присвоено значение только один раз - даже если вы используете `var` или `let`. Если мы не согласны с этим, то с таким же успехом мы можем утверждать, что дополнительные проверки могут скорее *увеличить* цену произвидительности, чем снизить её. Но на самом деле, движки достаточно умны.
 
 ## Заключение

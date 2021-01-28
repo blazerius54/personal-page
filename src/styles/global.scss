@@ -13,6 +13,7 @@ body {
     height: 100%;
     font-size: 14px;
     font-family: "Helvetica Neue", serif;
+    color: hsla(0,0%,0%,0.8);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,7 +27,7 @@ a {
 
 blockquote {
   border-left: 4px solid hsla(0, 0%, 0%, 0.3);
-  color: hsla(0, 0%, 0%, 0.5);
+  color: hsla(0,0%,0%,0.8);
   margin: 30px 0;
 }
 
@@ -148,4 +149,14 @@ pre[data-line] {
 .originHeaderWrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.translationNote:after {
+  content: 'прим. пер.';
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -.5em;
+  margin-left: 5px;
 }

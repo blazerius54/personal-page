@@ -27,7 +27,7 @@ origin: https://kentcdodds.com/blog/aha-programming
 ## WET
 
 Есть ещё один концепт, который люди называют *WET* программирование, что означает "Write Everything Twice"
-(перевод. "Пишите всё дважды").
+(<span class="translationNote">"Пишите всё дважды"</span>).
 Что так же догматично и слишком настойчиво, как и первый принцип. [Конлин Дурбин (Conlin Durbin) даёт такое
 определение:](https://dev.to/wuz/stop-trying-to-be-so-dry-instead-write-everything-twice-wet-5g33)
 

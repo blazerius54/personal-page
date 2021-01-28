@@ -7,6 +7,9 @@ const Layout = ({ children }) => (
     <div className="layoutWrapper">
         <Header />
         {children}
+        <footer>
+            <a href="mailto:vedxam@gmail.com">vedxam@gmail.com</a>
+        </footer>
     </div>
 );
 
