@@ -10,29 +10,27 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
     <>
         <Layout>
             <CircleBackground />
+            {/* TODO add proper title */}
             <SEO title="Home" lang="ru" />
             {edges.length > 0 && (
-                edges.map(({ node }) => {
-                    console.log(node);
-                    return (
-                        <div
-                            key={node.id}
-                            className="postsList"
+                edges.map(({ node }) => (
+                    <div
+                        key={node.id}
+                        className="postsList"
+                    >
+                        <Link
+                            to={node.fields.slug}
                         >
-                            <Link
-                                to={node.fields.slug}
-                            >
-                                <PostTitle
-                                    title={node.frontmatter.title}
-                                    date={node.frontmatter.date}
-                                />
-                                <p>
-                                    {node.frontmatter.shortDescription || node.excerpt}
-                                </p>
-                            </Link>
-                        </div>
-                    );
-                })
+                            <PostTitle
+                                title={node.frontmatter.title}
+                                date={node.frontmatter.date}
+                            />
+                            <p>
+                                {node.frontmatter.shortDescription || node.excerpt}
+                            </p>
+                        </Link>
+                    </div>
+                ))
             )}
         </Layout>
     </>

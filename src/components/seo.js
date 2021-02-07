@@ -22,7 +22,7 @@ function SEO({
 
     const metaDescription = description || site.siteMetadata.description;
     console.log({
-        description, lang, meta, title,
+        description, lang, meta, title, site,
     });
     return (
         <Helmet
@@ -30,7 +30,8 @@ function SEO({
                 lang,
             }}
             title={title}
-            titleTemplate={`%s | ${site.siteMetadata.title}`}
+            // title={site.siteMetadata.title}
+            // titleTemplate={`%s | ${site.siteMetadata.title}`}
             meta={[
                 {
                     name: 'description',

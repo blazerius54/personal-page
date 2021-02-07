@@ -2,9 +2,11 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import '../styles/global.scss';
+import SEO from '../components/seo';
 
 const BlogPost = ({ data }) => (
     <Layout>
+        <SEO title={data.markdownRemark.frontmatter.title} />
         <div className="postsWrapper">
             <h2 className="postTitle">
                 {data.markdownRemark.frontmatter.title}
