@@ -3,7 +3,7 @@ title: Написание гибких компонентов
 date: '2019-03-16'
 author: Dan Abramov
 origin: https://overreacted.io/writing-resilient-components/
-
+shortDescription: Четыре принципа, что бы направить в правильную сторону
 ---
 
 Когда люди начинают изучать React, они часто спрашивают о стайлгайде.

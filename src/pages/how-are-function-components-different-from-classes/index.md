@@ -3,6 +3,7 @@ title: Чем функциональные компоненты отличают
 date: '2019-03-03'
 author: Dan Abramov
 origin: https://overreacted.io/how-are-function-components-different-from-classes/
+shortDescription: Совсем другие покемоны
 ---
 
 Чем функциональный компоненты отличются от классовых?

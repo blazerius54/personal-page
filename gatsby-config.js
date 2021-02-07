@@ -3,6 +3,8 @@ module.exports = {
         title: 'maxdev',
         description: 'dev blog',
         author: 'maxdev',
+        // TODO add site URL here
+        site: '',
     },
     plugins: [
         'gatsby-plugin-react-helmet',

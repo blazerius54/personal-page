@@ -10,26 +10,29 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
     <>
         <Layout>
             <CircleBackground />
-            <SEO title="Home" />
+            <SEO title="Home" lang="ru" />
             {edges.length > 0 && (
-                edges.map(({ node }) => (
-                    <div
-                        key={node.id}
-                        className="postsList"
-                    >
-                        <Link
-                            to={node.fields.slug}
+                edges.map(({ node }) => {
+                    console.log(node);
+                    return (
+                        <div
+                            key={node.id}
+                            className="postsList"
                         >
-                            <PostTitle
-                                title={node.frontmatter.title}
-                                date={node.frontmatter.date}
-                            />
-                            <p>
-                                {node.excerpt}
-                            </p>
-                        </Link>
-                    </div>
-                ))
+                            <Link
+                                to={node.fields.slug}
+                            >
+                                <PostTitle
+                                    title={node.frontmatter.title}
+                                    date={node.frontmatter.date}
+                                />
+                                <p>
+                                    {node.frontmatter.shortDescription || node.excerpt}
+                                </p>
+                            </Link>
+                        </div>
+                    );
+                })
             )}
         </Layout>
     </>
@@ -48,6 +51,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY", locale: "ru")
+            shortDescription
           }
           fields {
             slug
