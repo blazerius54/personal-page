@@ -11,7 +11,7 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
         <Layout>
             <CircleBackground />
             {/* TODO add proper title */}
-            <SEO title="Home" lang="ru" />
+            <SEO />
             {edges.length > 0 && (
                 edges.map(({ node }) => (
                     <div

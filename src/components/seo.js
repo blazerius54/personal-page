@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({
-    description, lang, meta, title,
+    description, meta, title,
 }) {
     const { site } = useStaticQuery(
         graphql`
@@ -20,22 +20,20 @@ function SEO({
         `,
     );
 
-    const metaDescription = description || site.siteMetadata.description;
     console.log({
-        description, lang, meta, title, site,
+        description, meta, title, site,
     });
+
+    const titleTemplate = title ? `${site.siteMetadata.author} | %s ` : null;
     return (
         <Helmet
-            htmlAttributes={{
-                lang,
-            }}
-            title={title}
-            // title={site.siteMetadata.title}
-            // titleTemplate={`%s | ${site.siteMetadata.title}`}
+            htmlAttributes={{ lang: 'ru' }}
+            title={title || site.siteMetadata.title}
+            titleTemplate={titleTemplate}
             meta={[
                 {
                     name: 'description',
-                    content: metaDescription,
+                    content: title,
                 },
                 {
                     property: 'og:title',
@@ -43,7 +41,7 @@ function SEO({
                 },
                 {
                     property: 'og:description',
-                    content: metaDescription,
+                    content: title,
                 },
                 {
                     property: 'og:type',
@@ -63,7 +61,7 @@ function SEO({
                 },
                 {
                     name: 'twitter:description',
-                    content: metaDescription,
+                    content: title,
                 },
             ].concat(meta)}
         />
@@ -71,16 +69,13 @@ function SEO({
 }
 
 SEO.defaultProps = {
-    lang: 'en',
     meta: [],
     description: '',
 };
 
 SEO.propTypes = {
     description: PropTypes.string,
-    lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
-    title: PropTypes.string.isRequired,
 };
 
 export default SEO;
