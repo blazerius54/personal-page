@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({
-    description, meta, title,
-}) {
+function SEO({ title }) {
     const { site } = useStaticQuery(
         graphql`
           query {
@@ -20,11 +18,8 @@ function SEO({
         `,
     );
 
-    console.log({
-        description, meta, title, site,
-    });
-
     const titleTemplate = title ? `${site.siteMetadata.author} | %s ` : null;
+
     return (
         <Helmet
             htmlAttributes={{ lang: 'ru' }}
@@ -63,19 +58,17 @@ function SEO({
                     name: 'twitter:description',
                     content: title,
                 },
-            ].concat(meta)}
+            ]}
         />
     );
 }
 
 SEO.defaultProps = {
-    meta: [],
-    description: '',
+    title: '',
 };
 
 SEO.propTypes = {
-    description: PropTypes.string,
-    meta: PropTypes.arrayOf(PropTypes.object),
+    title: PropTypes.string,
 };
 
 export default SEO;
