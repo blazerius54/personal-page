@@ -2,9 +2,10 @@
   width: 160%;
   height: 500px;
   display: flex;
-  justify-content: flex-end;
   position: relative;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
 
   .bigCircle {
     position: absolute;
