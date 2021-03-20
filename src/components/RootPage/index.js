@@ -9,7 +9,6 @@ import CircleBackground from '../CircleBackground';
 const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
     <Layout>
         <CircleBackground />
-        {/* TODO add proper title */}
         <SEO />
         {edges.length > 0 && (
             edges.map(({ node }) => (
@@ -37,6 +36,7 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
 export const query = graphql`
   query {
     allMarkdownRemark(
+        filter: {fileAbsolutePath: {regex: "/pages/"}}
         sort: { fields: [frontmatter___date], order: DESC }
     ){
       totalCount
