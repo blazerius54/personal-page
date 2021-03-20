@@ -38,3 +38,14 @@
     border-radius: 100%;
   }
 }
+
+
+@media (max-width: 680px) {
+  .circleBackground {
+    height: 200px;
+
+    .bigCircle, .smallCircle {
+      display: none;
+    }
+  }
+}

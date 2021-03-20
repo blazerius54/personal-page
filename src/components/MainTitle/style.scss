@@ -1,5 +1,7 @@
 .mainTitleWrapper {
   z-index: 1;
+  cursor: default;
+  user-select: none;
 
   h1 {
     margin-bottom: 3px;
