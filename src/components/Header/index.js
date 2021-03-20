@@ -20,6 +20,12 @@ const Header = () => {
                     {data.site.siteMetadata.title}
                 </Link>
             </h3>
+
+            <Link to="/about">
+                <div>
+                    Обо мне
+                </div>
+            </Link>
         </header>
     );
 };
