@@ -1,0 +1,51 @@
+.circleBackground {
+  width: 160%;
+  height: 500px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+
+  .bigCircle {
+    position: absolute;
+    left: 530px;
+    height: inherit;
+    width: 800px;
+    background: radial-gradient(
+                    circle,
+                    #EDF8F0 30%,
+                    #EDFAFA 30%,
+                    #EDFAFA 48%,
+                    #F6FCFD 48%,
+                    #F6FCFD 69%,
+                    rgba(0,0,0,0) 69%,
+                    rgba(0,0,0,0) 100%
+    );
+  }
+
+  .smallCircle {
+    position: absolute;
+    left: -380px;
+    bottom: -280px;
+    height: inherit;
+    width: 780px;
+    background: radial-gradient(
+                    circle,
+                    #F6FCFD 50%,
+                    rgba(0,0,0,0) 50%
+    );
+    border-radius: 100%;
+  }
+}
+
+
+@media (max-width: 680px) {
+  .circleBackground {
+    height: 200px;
+
+    .bigCircle, .smallCircle {
+      display: none;
+    }
+  }
+}
