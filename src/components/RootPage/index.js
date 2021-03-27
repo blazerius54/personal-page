@@ -38,7 +38,7 @@ export const query = graphql`
     allMarkdownRemark(
         filter: {fileAbsolutePath: {regex: "/pages/"}}
         sort: { fields: [frontmatter___date], order: DESC }
-    ){
+    ) {
       totalCount
       edges {
         node {

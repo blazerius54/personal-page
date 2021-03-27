@@ -15,9 +15,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
     const result = await graphql(`
     query {
-      allMarkdownRemark(
+      allMarkdownRemark (
         filter: {fileAbsolutePath: {regex: "/pages/"}}
-    ) {
+      ) {
         edges {
           node {
             fields {
@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       }
     }
   `);
-
+  
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.fields.slug,
