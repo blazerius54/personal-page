@@ -6,7 +6,9 @@ import Header from '../Header';
 const Layout = ({ children }) => (
     <div className="layoutWrapper">
         <Header />
-        {children}
+        <div className="childrenWrapper">
+            {children}
+        </div>
         <footer>
             <a href="mailto:vedxam@gmail.com">vedxam@gmail.com</a>
         </footer>
