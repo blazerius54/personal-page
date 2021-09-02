@@ -1,11 +1,17 @@
 import React from 'react';
 import Layout from '../Layout';
+import './style.scss';
 
 const About = () => (
     <Layout>
         {/* TODO check why is postsWrapper working */}
         <div className="postsWrapper">
-            its about me
+            <div className="aboutWrapper">
+                <div className="avatar" />
+                <div>
+                    its about me
+                </div>
+            </div>
         </div>
     </Layout>
 );
