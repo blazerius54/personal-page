@@ -2,14 +2,12 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import './style.scss';
 import Layout from '../Layout';
-import SEO from '../seo';
 import { PostTitle } from '../PostTitle';
 import CircleBackground from '../CircleBackground';
 
 const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
     <Layout>
         <CircleBackground />
-        <SEO />
         {edges.length > 0 && (
             edges.map(({ node }) => (
                 <div

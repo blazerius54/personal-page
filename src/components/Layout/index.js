@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 import Header from '../Header';
+import SEO from '../seo';
 
 const Layout = ({ children }) => (
     <div className="layoutWrapper">
         <Header />
+        <SEO />
         <div className="childrenWrapper">
             {children}
         </div>
