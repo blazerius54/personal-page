@@ -17,6 +17,13 @@
 footer {
   width: 100%;
   padding: 50px 0;
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  font-size: 0.8rem;
+
+  a:first-child {
+    justify-self: end;
+  }
 }

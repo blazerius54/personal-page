@@ -16,4 +16,13 @@
     background-size: 140% 130%;
     border-radius: 50%;
   }
+
+  .aboutMeContent {
+    text-indent: 20px;
+  }
+
+  figcaption {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
