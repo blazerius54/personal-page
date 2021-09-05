@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: 'maxdev',
-        description: 'dev blog',
+        description: 'Front-end blog. Переводы, статьи.',
         author: 'maxdev',
         // TODO add site URL here
         site: '',
