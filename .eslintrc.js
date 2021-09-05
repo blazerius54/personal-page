@@ -19,8 +19,9 @@ module.exports = {
         'react',
     ],
     rules: {
+        'react/no-unescaped-entities': 0,
         'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-        indent: ['error', 4],
+        'indent': ['error', 4],
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
         'react/self-closing-comp': ['warn',
@@ -34,6 +35,7 @@ module.exports = {
         'react/jsx-no-target-blank': 0,
         'import/prefer-default-export': 'off',
         'react/jsx-one-expression-per-line': 'off',
+        'max-len': [1, 120],
     },
     parser: 'babel-eslint',
 };

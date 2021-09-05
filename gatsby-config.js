@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: 'maxdev',
-        description: 'dev blog',
+        description: 'Front-end blog. Переводы, статьи.',
         author: 'maxdev',
         // TODO add site URL here
         site: '',
@@ -41,7 +41,6 @@ module.exports = {
                             inlineCodeMarker: '÷',
                         },
                     },
-                    // 'gatsby-remark-copy-linked-files',
                     'gatsby-remark-autolink-headers',
                     'gatsby-plugin-twitter',
                     {
@@ -59,9 +58,8 @@ module.exports = {
                 name: 'gatsby-starter-default',
                 short_name: 'starter',
                 start_url: '/',
-                background_color: '#663399',
-                theme_color: '#663399',
                 display: 'minimal-ui',
+                icon: `src/assets/favicon.png`,
             },
         },
         {

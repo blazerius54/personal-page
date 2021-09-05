@@ -4,11 +4,10 @@ const path = require('path');
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
     if (node.internal.type === 'MarkdownRemark') {
-        const slug = `/post${createFilePath({ node, getNode, basePath: 'pages' })}`;
         createNodeField({
             node,
             name: 'slug',
-            value: slug,
+            value: createFilePath({ node, getNode, basePath: 'pages' }),
         });
     }
 };
@@ -16,7 +15,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
     const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark (
+        filter: {fileAbsolutePath: {regex: "/pages/"}}
+      ) {
         edges {
           node {
             fields {
@@ -27,7 +28,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       }
     }
   `);
-
+  
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.fields.slug,
@@ -41,5 +42,10 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     createPage({
         path: '/',
         component: path.resolve('./src/components/RootPage/index.js'),
+    });
+
+    createPage({
+      path: '/about',
+      component: path.resolve('./src/components/About/index.js'),
     });
 };
