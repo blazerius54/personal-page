@@ -41,7 +41,6 @@ module.exports = {
                             inlineCodeMarker: '÷',
                         },
                     },
-                    // 'gatsby-remark-copy-linked-files',
                     'gatsby-remark-autolink-headers',
                     'gatsby-plugin-twitter',
                     {
