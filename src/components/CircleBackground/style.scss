@@ -41,12 +41,15 @@
 }
 
 
-@media (max-width: 680px) {
+@media only screen 
+and (device-width: 414px) 
+and (device-height: 896px) 
+and (-webkit-device-pixel-ratio: 2),
+screen and (max-width: 375px) {
   .circleBackground {
-    height: 200px;
-
-    .bigCircle, .smallCircle {
-      display: none;
+    transform: scale(0.7);
+    .bigCircle {
+      left: 300px;
     }
   }
 }
