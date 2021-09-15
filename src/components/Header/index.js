@@ -23,7 +23,7 @@ const Header = () => {
 
             <Link to="/about">
                 <div>
-                    Обо мне
+                    🧑‍💻
                 </div>
             </Link>
         </header>

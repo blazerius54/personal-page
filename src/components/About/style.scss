@@ -26,3 +26,17 @@
     justify-content: flex-end;
   }
 }
+
+@media only screen 
+and (device-width: 414px) 
+and (device-height: 896px) 
+and (-webkit-device-pixel-ratio: 2),
+screen and (max-width: 375px) {
+  .aboutWrapper {
+    grid-template-columns: auto;
+
+    .avatar {
+      margin: 0 auto;
+    }
+  }
+}
