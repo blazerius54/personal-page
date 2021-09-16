@@ -36,6 +36,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'react/jsx-one-expression-per-line': 'off',
         'max-len': [1, 120],
+        'no-unused-vars': 0,
     },
     parser: 'babel-eslint',
 };

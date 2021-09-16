@@ -8,26 +8,28 @@ import CircleBackground from '../CircleBackground';
 const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
     <Layout>
         <CircleBackground />
-        {edges.length > 0 && (
-            edges.map(({ node }) => (
-                <div
-                    key={node.id}
-                    className="postsList"
-                >
-                    <Link
-                        to={node.fields.slug}
+        <div id="postListWrapper">
+            {edges.length > 0 && (
+                edges.map(({ node }) => (
+                    <div
+                        key={node.id}
+                        className="postsList"
                     >
-                        <PostTitle
-                            title={node.frontmatter.title}
-                            date={node.frontmatter.date}
-                        />
-                        <p>
-                            {node.frontmatter.shortDescription || node.excerpt}
-                        </p>
-                    </Link>
-                </div>
-            ))
-        )}
+                        <Link
+                            to={node.fields.slug}
+                        >
+                            <PostTitle
+                                title={node.frontmatter.title}
+                                date={node.frontmatter.date}
+                            />
+                            <p>
+                                {node.frontmatter.shortDescription || node.excerpt}
+                            </p>
+                        </Link>
+                    </div>
+                ))
+            )}
+        </div>
     </Layout>
 );
 

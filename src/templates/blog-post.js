@@ -1,8 +1,9 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import '../styles/global.scss';
 import SEO from '../components/seo';
+import arrow from '../assets/backward-arrow.svg';
 
 const BlogPost = ({ data }) => (
     <Layout>
@@ -22,6 +23,12 @@ const BlogPost = ({ data }) => (
                 </h5>
             </div>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+            <div className="home">
+                <Link to="/#postListWrapper">
+                    🏠
+                    {/* <img src={arrow} /> */}
+                </Link>
+            </div>
         </div>
     </Layout>
 );

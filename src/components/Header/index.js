@@ -22,9 +22,7 @@ const Header = () => {
             </h3>
 
             <Link to="/about">
-                <div>
-                    🧑‍💻
-                </div>
+                🧑‍💻
             </Link>
         </header>
     );

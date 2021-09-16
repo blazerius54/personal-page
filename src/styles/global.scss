@@ -32,9 +32,9 @@ body > div > div {
 and (device-width: 414px) 
 and (device-height: 896px) 
 and (-webkit-device-pixel-ratio: 2),
-screen and (max-width: 375px) {
+screen and (max-width: 740px) {
   body > div > div {
-    padding: 15px;
+    padding: 0 15px;
   }
 }
 
@@ -59,8 +59,13 @@ h1, h2, h3, h4, h5, h6 {
 h2 code {
   font-size: inherit;
 }
+
 a {
   color: #59C9DB;
+}
+
+a:hover, a:active {
+  text-decoration: none;
 }
 
 blockquote {
@@ -202,4 +207,14 @@ pre[data-line] {
   vertical-align: baseline;
   top: -.5em;
   margin-left: 5px;
+}
+
+.home {
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    width: 25px;
+    margin: 0;
+  }
 }
