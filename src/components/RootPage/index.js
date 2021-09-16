@@ -13,11 +13,10 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
                 edges.map(({ node }) => (
                     <div
                         key={node.id}
+                        id={node.id}
                         className="postsList"
                     >
-                        <Link
-                            to={node.fields.slug}
-                        >
+                        <Link to={node.fields.slug}>
                             <PostTitle
                                 title={node.frontmatter.title}
                                 date={node.frontmatter.date}

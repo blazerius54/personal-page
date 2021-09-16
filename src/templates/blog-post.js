@@ -24,9 +24,8 @@ const BlogPost = ({ data }) => (
             </div>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
             <div className="home">
-                <Link to="/#postListWrapper">
-                    🏠
-                    {/* <img src={arrow} /> */}
+                <Link to={`/#${data.markdownRemark.id}`}>
+                    <img alt="arrow" src={arrow} />
                 </Link>
             </div>
         </div>
@@ -37,6 +36,7 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      id
       frontmatter {
         title
         author
