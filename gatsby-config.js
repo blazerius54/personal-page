@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: 'personal-page',
   siteMetadata: {
     title: 'maxdev',
     description: 'Front-end blog. Переводы, статьи.',
