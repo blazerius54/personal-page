@@ -1,4 +1,7 @@
 module.exports = {
+  flags: {
+    THE_FLAG: false,
+  },
   pathPrefix: 'personal-page',
   siteMetadata: {
     title: 'maxdev',
@@ -11,12 +14,17 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: require('sass'),
       },
     },
     {
