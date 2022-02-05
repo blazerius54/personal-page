@@ -6,30 +6,30 @@ import { PostTitle } from '../PostTitle';
 import CircleBackground from '../CircleBackground';
 
 const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
-    <Layout>
-        <CircleBackground />
-        <div id="postListWrapper">
-            {edges.length > 0 && (
-                edges.map(({ node }) => (
-                    <div
-                        key={node.id}
-                        id={node.id}
-                        className="postsList"
-                    >
-                        <Link to={node.fields.slug}>
-                            <PostTitle
-                                title={node.frontmatter.title}
-                                date={node.frontmatter.date}
-                            />
-                            <p>
-                                {node.frontmatter.shortDescription || node.excerpt}
-                            </p>
-                        </Link>
-                    </div>
-                ))
-            )}
-        </div>
-    </Layout>
+  <Layout>
+    <CircleBackground />
+    <div id="postListWrapper">
+      {edges.length > 0 && (
+        edges.map(({ node }) => (
+          <div
+            key={node.id}
+            id={node.id}
+            className="postsList"
+          >
+            <Link to={node.fields.slug}>
+              <PostTitle
+                title={node.frontmatter.title}
+                date={node.frontmatter.date}
+              />
+              <p>
+                {node.frontmatter.shortDescription || node.excerpt}
+              </p>
+            </Link>
+          </div>
+        ))
+      )}
+    </div>
+  </Layout>
 );
 
 export const query = graphql`

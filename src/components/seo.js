@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ title }) {
-    const { site } = useStaticQuery(
-        graphql`
+  const { site } = useStaticQuery(
+    graphql`
           query {
             site {
               siteMetadata {
@@ -16,43 +16,43 @@ function SEO({ title }) {
             }
           }
         `,
-    );
+  );
 
-    const titleTemplate = title ? `${site.siteMetadata.author} | %s ` : null;
+  const titleTemplate = title ? `${site.siteMetadata.author} | %s ` : null;
 
-    return (
-        <Helmet
-            htmlAttributes={{ lang: 'ru' }}
-            title={title || site.siteMetadata.title}
-            titleTemplate={titleTemplate}
-            meta={[
-                {
-                    name: 'description',
-                    content: title,
-                },
-                {
-                    property: 'og:title',
-                    content: title,
-                },
-                {
-                    property: 'og:description',
-                    content: title,
-                },
-                {
-                    property: 'og:type',
-                    content: 'website',
-                },
-            ]}
-        />
-    );
+  return (
+    <Helmet
+      htmlAttributes={{ lang: 'ru' }}
+      title={title || site.siteMetadata.title}
+      titleTemplate={titleTemplate}
+      meta={[
+        {
+          name: 'description',
+          content: title,
+        },
+        {
+          property: 'og:title',
+          content: title,
+        },
+        {
+          property: 'og:description',
+          content: title,
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+        },
+      ]}
+    />
+  );
 }
 
 SEO.defaultProps = {
-    title: '',
+  title: '',
 };
 
 SEO.propTypes = {
-    title: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default SEO;

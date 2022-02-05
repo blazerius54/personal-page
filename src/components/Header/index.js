@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import './style.scss';
 
 const Header = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
         query SiteTitleQuery {
           site {
             siteMetadata {
@@ -13,19 +13,19 @@ const Header = () => {
         }
     `);
 
-    return (
-        <header>
-            <h3>
-                <Link to="/">
-                    {data.site.siteMetadata.title}
-                </Link>
-            </h3>
+  return (
+    <header>
+      <h3>
+        <Link to="/">
+          {data.site.siteMetadata.title}
+        </Link>
+      </h3>
 
-            <Link to="/about">
-                🧑‍💻
-            </Link>
-        </header>
-    );
+      <Link to="/about">
+        🧑‍💻
+      </Link>
+    </header>
+  );
 };
 
 export default Header;
