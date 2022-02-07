@@ -2,7 +2,7 @@ module.exports = {
   flags: {
     THE_FLAG: false,
   },
-  pathPrefix: 'personal-page',
+  pathPrefix: '',
   siteMetadata: {
     title: 'maxdev',
     description: 'Front-end blog. Переводы, статьи.',
