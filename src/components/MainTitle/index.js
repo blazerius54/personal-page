@@ -7,7 +7,7 @@ export const MainTitle = () => (
       Frontend blog
     </h1>
     <span>
-      Перевод, статьи
+      Переводы, статьи
     </span>
   </div>
 );
