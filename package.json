@@ -12,6 +12,7 @@
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-sass": "^2.3.10",
     "gatsby-plugin-sharp": "^2.14.1",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-twitter": "^2.10.0",
     "gatsby-plugin-typography": "^2.5.9",
     "gatsby-remark-autolink-headers": "^2.3.11",
@@ -28,9 +29,9 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19",
+    "sass": "^1.49.7",
     "typography": "^0.16.19",
-    "typography-theme-github": "^0.16.19",
-    "sass": "^1.49.7"
+    "typography-theme-github": "^0.16.19"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

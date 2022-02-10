@@ -8,5 +8,18 @@
   h1 {
     margin: 0;
     padding-bottom: 0;
+    font-size: 3rem;
+  }
+}
+
+@media only screen
+and (device-width: 414px)
+and (device-height: 896px)
+and (-webkit-device-pixel-ratio: 2),
+screen and (max-width: 375px) {
+  .mainTitleWrapper {
+    h1 {
+      font-size: 2rem;
+    }
   }
 }

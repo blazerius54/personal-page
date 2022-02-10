@@ -1,7 +1,9 @@
+@import '../../styles/global';
+
 .circleBackground {
   width: 160%;
   left: -30%;
-  height: 800px;
+  height: 100vh;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -37,6 +39,14 @@
     );
     border-radius: 100%;
   }
+
+  .nextButton {
+    z-index: 1;
+    align-self: flex-end;
+    color: $blueColor;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
 }
 
 
@@ -45,10 +55,7 @@ and (device-width: 414px)
 and (device-height: 896px) 
 and (-webkit-device-pixel-ratio: 2),
 screen and (max-width: 375px) {
-  .circleBackground {
-    transform: scale(0.8);
-    .bigCircle {
-      left: 300px;
-    }
+  .circleBackground .bigCircle {
+    left: 300px;
   }
 }

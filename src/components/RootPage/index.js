@@ -4,11 +4,12 @@ import './style.scss';
 import Layout from '../Layout';
 import { PostTitle } from '../PostTitle';
 import CircleBackground from '../CircleBackground';
+import { postListWrapper } from '../../utils/consts';
 
 const IndexPage = ({ data: { allMarkdownRemark: { edges } } }) => (
   <Layout>
     <CircleBackground />
-    <div id="postListWrapper">
+    <div id={postListWrapper}>
       {edges.length > 0 && (
         edges.map(({ node }) => (
           <div
