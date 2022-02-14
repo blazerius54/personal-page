@@ -18,7 +18,7 @@ function SEO({ title }) {
         `,
   );
 
-  const titleTemplate = title ? `${site.siteMetadata.author} | %s ` : null;
+  const titleTemplate = title ? `${site.siteMetadata.author} | %s ` : `${site.siteMetadata.author} | frontend blog`;
 
   return (
     <Helmet
