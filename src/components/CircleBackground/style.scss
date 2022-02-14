@@ -41,6 +41,7 @@
   }
 
   .nextButton {
+    cursor: pointer;
     z-index: 1;
     align-self: flex-end;
     color: $blueColor;
