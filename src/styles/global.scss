@@ -18,16 +18,6 @@ body > div > div {
   outline: none;
 }
 
-@media screen 
-and (device-width: 414px) 
-and (device-height: 896px) 
-and (-webkit-device-pixel-ratio: 2),
-screen and (max-width: 740px) {
-  body > div > div {
-    padding: 0 15px;
-  }
-}
-
 body {
   min-height: 100%;
   display: flex;

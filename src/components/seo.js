@@ -6,16 +6,16 @@ import { useStaticQuery, graphql } from 'gatsby';
 function SEO({ title }) {
   const { site } = useStaticQuery(
     graphql`
-          query {
-            site {
-              siteMetadata {
-                title
-                description
-                author
-              }
-            }
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
           }
-        `,
+        }
+      }
+    `,
   );
 
   const titleTemplate = title ? `${site.siteMetadata.author} | %s ` : `${site.siteMetadata.author} | frontend blog`;

@@ -6,16 +6,18 @@ header {
   justify-content: space-between;
   align-items: baseline;
   z-index: 1;
+  padding: 0 15px;
 
   a {
     font-size: 1.5rem;
+
     &:hover {
       text-decoration: none;
     }
 
     div {
       font-size: 14px;
-      color: hsla(0,0%,0%,0.8);
+      color: hsla(0, 0% ,0%, 0.8);
     }
   }
 }

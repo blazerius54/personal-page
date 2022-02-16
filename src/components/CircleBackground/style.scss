@@ -65,11 +65,47 @@
 
 
 @media only screen 
-and (device-width: 414px) 
+and (device-width: 414px)
 and (device-height: 896px) 
 and (-webkit-device-pixel-ratio: 2),
-screen and (max-width: 375px) {
+screen and (max-width: 740px) {
+  .circleBackground {
+    left: 0;
+    width: 100%;
+
+    .bigCircle {
+      left: 450px;
+    }
+  }
+}
+
+@media only screen
+and (device-width: 414px)
+and (device-height: 896px)
+and (-webkit-device-pixel-ratio: 2),
+screen and (max-width: 600px) {
   .circleBackground .bigCircle {
     left: 300px;
   }
 }
+
+@media only screen
+and (device-width: 414px)
+and (device-height: 896px)
+and (-webkit-device-pixel-ratio: 2),
+screen and (max-width: 425px) {
+  .circleBackground .bigCircle {
+    left: 240px;
+  }
+}
+
+@media only screen
+and (device-width: 414px)
+and (device-height: 896px)
+and (-webkit-device-pixel-ratio: 2),
+screen and (max-width: 390px) {
+  .circleBackground .bigCircle {
+    left: 200px;
+  }
+}
+
